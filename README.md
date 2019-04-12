@@ -131,3 +131,9 @@ Ayudará mucho que realmente hayas implementando **funciones puras** en el archi
   * Casas : Gryffindor, Slytherin, Ravenclaw, Hufflepuff.
 
 * El usuario requiere poder ordenar la visualización de los personajes de Harry Potter, de manera ascendente o descendente considerando la edad actual del personaje.
+
+## Final
+
+* Haz un fork del repositorio y empecemos a codear!!
+
+* Recuerda publicarlo en gh-pages.
