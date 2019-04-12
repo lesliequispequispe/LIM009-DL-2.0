@@ -2,7 +2,7 @@
 
 Bienvenida a tu tercer proyecto del common core.
 En este proyecto **construirás una _página web_ para visualizar un
-_conjunto (set) de datos_ de los personajes de la película de Harry Potter** manipulando dichos datos a través de arreglos y objetos en JavaScript.
+_conjunto (set) de datos_ de los personajes de la película de Harry Potter** manipulando dichos datos a través de arreglos y objetos con JavaScript.
 
 ## Consideraciones generales del proyecto
 
@@ -18,7 +18,7 @@ _conjunto (set) de datos_ de los personajes de la película de Harry Potter** ma
 
 ## Objetivos de aprendizaje
 
-El objetivo principal de este proyecto es que afiances tu aprendizaje practicando la planificación agile utilizando scrum con el fin de que logres, en el tiempo indicado, implementar una interfaz web donde se pueda visualizar y manipular data de los personajes de la pelicula de Harry Potter utilizando arreglos y objetos en JavaScript.
+El objetivo principal de este proyecto es que afiances tu aprendizaje practicando la planificación agile utilizando scrum con el fin de que logres, en el tiempo indicado, implementar una interfaz web donde se pueda visualizar y manipular data de los personajes de la pelicula de Harry Potter utilizando arreglos y objetos con JavaScript.
 
 Dicho en palabras sencillas, aprenderás:
 
@@ -90,16 +90,17 @@ Ayudará mucho que realmente hayas implementando en el archivo `data.js` **funci
 
 ## Historias de Usuario
 
-* El usuario requiere poder visualizar a todos los personajes de la pelicula de Harry Potter indicando por cada uno de ellos :
-  * La imagen del personaje,
-  * nombre del actor que representa al pesonaje,
-  * nombre del personaje,
+* El usuario requiere poder visualizar a todos los personajes de la pelicula de Harry Potter indicando por cada uno de ellos:
+
+  * La imagen del personaje.
+  * nombre del actor que representa al pesonaje.
+  * nombre del personaje.
   * casa a la que pertenece, si el personaje pertenece a una casa.
   * la imagen de la insignia de la casa a la que pertenece ese personaje, si fuese el caso.
   * año de nacimiento del personaje.
   * si es estudiante de hogwarts.
   * Si es parte del staff (director, maestro, etc) de hogwarts.
 
-* El usuario requiere poder filtrar a los personajes de la pelicula de Harry Potter **Por Casas**, **Por género** **Por status estudiante de hogwart**, y **Por status staff de hogwart**
+* El usuario requiere poder filtrar a los personajes de la pelicula de Harry Potter **Por Casas**, **Por género** **Por status estudiante de hogwart**, y **Por status staff de hogwart**.
 
-* El usuario requiere poder ordenar la visualización de los personajes, de manera ascendente o descendente considerando la edad actual del personaje.
+* El usuario requiere poder ordenar la visualización de los personajes de la pelicula de Harry Potter, de manera ascendente o descendente considerando la edad actual del personaje.
