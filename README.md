@@ -63,7 +63,11 @@ Dicho en palabras sencillas, aprenderás:
 
 ### Visualmente (HTML5 y CSS3)
 
-Para este proyecto te daremos un layout (diseño) el cual deberás replicar de manera exacta utilizando **HTML5** y **CSS3**. A continuación describimos los archivos que utilizarás.
+Para este proyecto te daremos un layout (diseño) el cual deberás replicar de manera exacta utilizando **HTML5** y **CSS3**.
+
+![diseño a replicar](https://user-images.githubusercontent.com/25906896/56048432-22b8b880-5d0d-11e9-807c-e7e74c19e39c.png)
+
+ A continuación describimos los archivos que utilizarás.
 
 #### `src/index.html`
 
@@ -87,33 +91,35 @@ En este archivo escibirás todo el código que tenga que ver con mostrar los dat
 
 #### `src/data.js`
 
-En este archivo escribirás todo el código que contenga las funcionalidades que desea el usuario final descritas en **las historias de usuario**.
+En este archivo escribirás todo el código que contenga las funcionalidades descritas en **las historias de usuario**.
 Estas funciones, que representan lo que el usuario quiere, deben ser [_funciones puras_](https://medium.com/laboratoria-developers/introducci%C3%B3n-a-la-programaci%C3%B3n-funcional-en-javascript-parte-2-funciones-puras-b99e08c2895d) e independientes del DOM.
 
 #### `src/data`
 
-En esta carpeta encontrarás un archivo con la extensión `.json` que utilizarás para cargar la data de los personajes de la película de Harry Potter utilizando [`fetch()`](https://developer.mozilla.org/es/docs/Web/API/Fetch_API)
+En esta carpeta encontrarás un archivo con la extensión `.json` que utilizarás para cargar la data de los personajes de Harry Potter utilizando [`fetch()`](https://developer.mozilla.org/es/docs/Web/API/Fetch_API)
 
 #### `test/data.spec.js`
 
 En este archivo tendrás que completar las pruebas unitarias de las funciones implementadas en el archivo `data.js` utilizando **Jest**.
 Tus Pruebas Unitarias deben dar una cobertura (coverage) del 70% de _statements_ (_sentencias_), _functions_ (_funciones_), _lines_ (_líneas_), y _branches_ (_ramas_).
-Ayudará mucho que realmente hayas implementando en el archivo `data.js` **funciones puras**
+Ayudará mucho que realmente hayas implementando **funciones puras** en el archivo `data.js`
 
 ## Historias de Usuario
 
-* El usuario requiere poder visualizar a todos los personajes de la pelicula de Harry Potter indicando por cada uno de ellos:
+* El usuario requiere poder visualizar a todos los personajes de Harry Potter mostrando por cada uno de ellos:
 
-  * La imagen del personaje.
+  * imagen del personaje.
   * nombre del actor que representa al personaje.
   * nombre del personaje.
   * la especie del personaje.
   * casa a la que pertenece el personaje.
-  * la imagen de la insignia de la casa a la que pertenece ese personaje, si fuese el caso.
-  * año de nacimiento del personaje.
-  * si es estudiante de hogwarts.
-  * Si es parte del staff (director, maestro, etc) de hogwarts.
+  * la imagen de la insignia de la casa a la que pertenece ese personaje (de ser el caso).
+  * edad actual del personaje.
+  * el rol del personaje, si es estudiante o parte del staff.
 
-* El usuario requiere poder filtrar a los personajes de la pelicula de Harry Potter **Por Casas**, **Por género** **Por status estudiante de hogwart o staff**
+* El usuario requiere poder filtrar a los personajes de Harry Potter por :
+  * Género : female, male.
+  * Rol : student, staff.
+  * Casas : Gryffindor, Slytherin, Ravenclaw, Hufflepuff.
 
-* El usuario requiere poder ordenar la visualización de los personajes de la pelicula de Harry Potter, de manera ascendente o descendente considerando la edad actual del personaje.
+* El usuario requiere poder ordenar la visualización de los personajes de Harry Potter, de manera ascendente o descendente considerando la edad actual del personaje.
