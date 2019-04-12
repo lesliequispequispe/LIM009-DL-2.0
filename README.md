@@ -65,7 +65,15 @@ Dicho en palabras sencillas, aprenderás:
 
 Para este proyecto te daremos un layout (diseño) el cual deberás replicar de manera exacta utilizando **HTML5** y **CSS3**.
 
-![diseño a replicar](https://user-images.githubusercontent.com/25906896/56048432-22b8b880-5d0d-11e9-807c-e7e74c19e39c.png)
+Para los colores, lo dejamos a tu imaginación y como fuente te sugerimos utilizar *Roboto*, *Monserrat* u *Open Sans*
+
+* Diseño *mobile*
+
+ ![diseño mobile](https://user-images.githubusercontent.com/25906896/56050330-3403c400-5d11-11e9-8e8b-ab479ca1054b.png).
+
+* Diseño *desktop*
+
+![diseño desktop](https://user-images.githubusercontent.com/25906896/56048432-22b8b880-5d0d-11e9-807c-e7e74c19e39c.png).
 
  A continuación describimos los archivos que utilizarás.
 
