@@ -35,8 +35,10 @@ Dicho en palabras sencillas, aprenderás:
 
 ### A nivel de CSS
 
-* Implementar selectores de clase.
+* Apliques y refuerces los conceptos base de css tales como : modelo de cajas, posicionamiento (float, absolute, relative, fixed).
+* Implementar selectores de clase evitando la redundancia de reglas de estilo en css.
 * Utilizar medias queries para lograr diseño responsive - **mobile first**.
+* Que puedas implementar un sistema de grillas básico que te permita crear un diseño adaptativo para **mobile, tablet y desktop**
 
 ### A nivel de JavaScript
 
