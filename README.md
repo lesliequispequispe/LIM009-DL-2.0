@@ -130,7 +130,7 @@ Ayudará mucho que realmente hayas implementando **funciones puras** en el archi
   * Rol : student, staff.
   * Casas : Gryffindor, Slytherin, Ravenclaw, Hufflepuff.
 
-* El usuario requiere poder ordenar la visualización de los personajes de Harry Potter, de manera ascendente o descendente considerando la edad actual del personaje.
+* El usuario requiere poder ordenar la visualización de los personajes de Harry Potter, de manera ascendente y/o descendente considerando la edad actual del personaje.
 
 ## Final
 
