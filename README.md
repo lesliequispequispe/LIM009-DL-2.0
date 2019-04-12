@@ -134,6 +134,6 @@ Ayudará mucho que realmente hayas implementando **funciones puras** en el archi
 
 ## Final
 
-* Haz un fork del repositorio y empecemos a codear!!
+* Haz un fork del repositorio y empecemos a planificar lo que realizaremos por cada sprint.
 
 * Recuerda publicarlo en gh-pages.
