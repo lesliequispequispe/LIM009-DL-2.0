@@ -1,12 +1,12 @@
 # Proyecto Data Lover 2.0 - Potter
 
 Bienvenida a tu tercer proyecto del common core.
-En este proyecto **construirás una _página web_ para visualizar un
-_conjunto (set) de datos_ de los personajes de la película de Harry Potter** manipulando dichos datos a través de arreglos y objetos con JavaScript.
+
+En este proyecto **construirás una _página web_ para visualizar un _conjunto (set) de datos_ de los personajes de la película de Harry Potter** manipulando dichos datos a través de arreglos y objetos con JavaScript.
 
 ## Consideraciones generales del proyecto
 
-* Aplicar y profundizar todo lo que aprendiste tanto en la planificación como en la parte técnica en los proyectos **cipher y data-lovers** .
+* Aplicar y profundizar todo lo que aprendiste tanto en la planificación como en la parte técnica en los proyectos **cipher y data-lovers**.
 
 * Este proyecto se debe resolver de manera individual bajo la planificación agile utilizando scrum (sprint, historias de usuario, definición de terminado, criterios de aceptación, daily, retrospectivas).
 
@@ -105,7 +105,7 @@ Ayudará mucho que realmente hayas implementando en el archivo `data.js` **funci
 * El usuario requiere poder visualizar a todos los personajes de la pelicula de Harry Potter indicando por cada uno de ellos:
 
   * La imagen del personaje.
-  * nombre del actor que representa al pesonaje.
+  * nombre del actor que representa al personaje.
   * nombre del personaje.
   * la especie del personaje.
   * casa a la que pertenece el personaje.
