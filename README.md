@@ -48,19 +48,31 @@ Dicho en palabras sencillas, aprenderás:
 * **Manejar eventos del DOM** para permitir interacción con el usuario (mostrar, filtrar, ordenar, ...).
 * **Implementar y comprender la importancia de escribir test en tu proyecto utilizando jest**.
 
-## Consideraciones técnicas
+## Consideraciones técnicas a tomar en cuenta
 
 ### Planificación (Agile - Scrum)
 
+* Deberás plasmar en un archivo **google doc** las definiciones de terminado y criterios de aceptación por cada historia de usuario.
+
+* Utiliza esta guía para que puedas avanzar, pide feedback a tus coaches, de manera que puedas contemplar en cada definición de terminado todos los puntos que son objetivos de aprendizaje en este proyecto y no dejes los test al final, por ejemplo.
+
+* En la medida de lo posible, termina una historia de usuario antes de pasar a la siguiente (Cumple con Definición de Terminado + Criterios de Aceptación) contemplando todos los puntos que son objetivos de aprendizaje en este proyecto.
+
 ### Visualmente (HTML5 y CCS3)
+
+Para este proyecto te daremos un layout(diseño) el cual deberás replicar de manera exacta utilizando **HTML5** y **CSS3**.
+
+A continuación describimos los archivos que utilizarás.
 
 #### `src/index.html`
 
 Como en el proyecto anterior, existe un archivo `index.html`. Como ya sabes,
-acá va la página que se mostrará al usuario. También nos sirve para indicar
-qué scripts se usarán y unir todo lo que hemos hecho.
+acá va la página que se mostrará al usuario y donde utilizando etiquetas semánticas de HTML5 replicarás el diseño propuesto para este proyecto.
 
 #### `src/style.css`
+
+Aquí escribirás todas las reglas de estilo, tus selectores de clases, definirás tus media-queries de manera que puedas lograr que tu proyecto se vea hermoso tal igual al diseño propuesto.
+**No está permitido el uso de frameworks de css (bootstrap), realmente queremos que refuerces las bases en css con este proyecto**
 
 ### Funcionalmente (JavaScript - ES6)
 
@@ -95,7 +107,8 @@ Ayudará mucho que realmente hayas implementando en el archivo `data.js` **funci
   * La imagen del personaje.
   * nombre del actor que representa al pesonaje.
   * nombre del personaje.
-  * casa a la que pertenece, si el personaje pertenece a una casa.
+  * la especie del personaje.
+  * casa a la que pertenece el personaje.
   * la imagen de la insignia de la casa a la que pertenece ese personaje, si fuese el caso.
   * año de nacimiento del personaje.
   * si es estudiante de hogwarts.
