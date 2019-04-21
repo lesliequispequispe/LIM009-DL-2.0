@@ -2,7 +2,7 @@
     padding: 2;
     margin: 2;
 }
-header .contenedor-encabezado {
+.contenedor-encabezado {
     background:#1a1a1a;
     color:hsl(60, 100%, 80%);
     width: 20%;
@@ -11,7 +11,6 @@ header .contenedor-encabezado {
     height: 750px;
     margin-right: 20px;
     /* position: fixed; */
-
 }
 .botones {
     background: #993333;
@@ -45,5 +44,8 @@ label {
 }
 /* .imagenes {
     font-size: 300px;
+} */
+/* footer h3 {
+    color: aliceblue;
 } */
 

@@ -3,7 +3,7 @@
   return 'example';
 };
 window.example = example; */
-const ordenadoAscendente = (data) => {
+/* const ordenadoAscendente = (data) => {
   let arrOrdenadoAsc = [];
   arrOrdenadoAsc = data.sort(
     (a, b) => {
@@ -20,7 +20,7 @@ const ordenadoAscendente = (data) => {
   return arrOrdenadoAsc;
 }
 
-window.ordenadoAscendente = ordenadoAscendente;
+window.ordenadoAscendente = ordenadoAscendente; */
 
 const filtroGenero = (data, condicion) => {
   let arrFiltroGenero = [];
@@ -28,6 +28,20 @@ const filtroGenero = (data, condicion) => {
     aa.gender === condicion);
   return arrFiltroGenero;
 }
-
 window.filtroGenero = filtroGenero;
 
+const filtroRol = (data, condicion) => {
+  let arrFiltroRol = [];
+  arrFiltroRol = data.filter((bb) => 
+    bb.hogwartsStaff && bb.hogwartsStudent === true && condicion );
+  return arrFiltroRol;
+}
+window.filtroRol = filtroRol;
+
+const filtroCasa = (data, condicion) => {
+  let arrFiltroCasa = [];
+  arrFiltroCasa = data.filter((cc) =>
+  cc.house === condicion)
+  return arrFiltroCasa;
+}
+window.filtroCasa = filtroCasa;

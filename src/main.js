@@ -6,6 +6,18 @@ const cargarJSON = () => {
       })
       .then((data) => {
         pintadoContenedor.innerHTML = pintandoDataHarryPotter(data);
+        const genero = document.getElementById("genero");
+        genero.addEventListener("click", () => {
+          pintadoContenedor.innerHTML = pintandoDataHarryPotter(filtroGenero(data, genero.value));
+        })
+         const rol = document.getElementById("rol");
+         rol.addEventListener("click", () => {
+          pintadoContenedor.innerHTML = pintandoDataHarryPotter(filtroRol(data, rol.value));
+        })
+         const casa = document.getElementById("casa");
+         casa.addEventListener("click", () => {
+          pintadoContenedor.innerHTML = pintandoDataHarryPotter(filtroCasa(data, casa.value));
+        }) 
         /* const ascendente = document.getElementById("ascendente");
           ascendente.addEventListener("click", () => { 
             pintadoContenedor.innerHTML = pintandoDataHarryPotter(ordenadoAscendente(data));
@@ -28,6 +40,7 @@ const cargarJSON = () => {
                   <div>
                   <p>name:${data[i].name}</p>
                   <p>actor:${data[i].actor}</p>
+                  <P>gender:${data[i].gender}</p>
                   <p>species:${data[i].species}</p>
                   <p>house:${data[i].house}</p>
                   <p>dateOfBirth:${data[i].dateOfBirth}</p>
