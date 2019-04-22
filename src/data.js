@@ -27,21 +27,29 @@ const filtroGenero = (data, condicion) => {
   arrFiltroGenero = data.filter((aa) =>
     aa.gender === condicion);
   return arrFiltroGenero;
-}
+};
 window.filtroGenero = filtroGenero;
 
-const filtroRol = (data, condicion) => {
+const filtroRolStaff = (data, condicion) => {
   let arrFiltroRol = [];
-  arrFiltroRol = data.filter((bb) => 
-    bb.hogwartsStaff && bb.hogwartsStudent === true && condicion );
+  arrFiltroRol = data.filter((bb) =>
+    bb.hogwartsStaff === condicion);
   return arrFiltroRol;
-}
-window.filtroRol = filtroRol;
+};
+window.filtroRolStaff = filtroRolStaff;
+
+const filtroRolStudents = (data, condicion) => {
+  let arrRolStudents = [];
+  arrRolStudents = data.filter((cc) =>
+    cc.hogwartsStudent === condicion);
+  return arrRolStudents;
+};
+window.filtroRolStudents = filtroRolStudents;
 
 const filtroCasa = (data, condicion) => {
   let arrFiltroCasa = [];
   arrFiltroCasa = data.filter((cc) =>
-  cc.house === condicion)
+    cc.house === condicion);
   return arrFiltroCasa;
-}
+};
 window.filtroCasa = filtroCasa;
