@@ -26,14 +26,15 @@ const cargarJSON = () => {
       casa.addEventListener("click", () => {
         pintadoContenedor.innerHTML = pintandoDataHarryPotter(filtroCasa(data, casa.value));
       });
-      /* const ascendente = document.getElementById("ascendente");
-        ascendente.addEventListener("click", () => { 
-          pintadoContenedor.innerHTML = pintandoDataHarryPotter(ordenadoAscendente(data));
-          const descendente = document.getElementById("descendente");
-        descendente.addEventListener("click", () => { 
+
+      const ascendente = document.getElementById("ascendente");
+      ascendente.addEventListener("click", () => {
+        pintadoContenedor.innerHTML = pintandoDataHarryPotter(ordenadoAscendente(data));
+        const descendente = document.getElementById("descendente");
+        descendente.addEventListener("click", () => {
           pintadoContenedor.innerHTML = pintandoDataHarryPotter(ordenadoAscendente(data).reverse());
-        })
-      }) */
+        });
+      });
     });
 };
 cargarJSON();

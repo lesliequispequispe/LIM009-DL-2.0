@@ -3,24 +3,6 @@
   return 'example';
 };
 window.example = example; */
-/* const ordenadoAscendente = (data) => {
-  let arrOrdenadoAsc = [];
-  arrOrdenadoAsc = data.sort(
-    (a, b) => {
-      let aa = parseInt(a.yearOfBirth);
-      let bb = parseInt(b.yearOfBirth);
-      if (aa < bb) {
-        return -1;
-      } else if (aa > bb) {
-        return 1;
-      } else {
-        return 0;
-      }
-    })
-  return arrOrdenadoAsc;
-}
-
-window.ordenadoAscendente = ordenadoAscendente; */
 
 const filtroGenero = (data, condicion) => {
   let arrFiltroGenero = [];
@@ -53,3 +35,22 @@ const filtroCasa = (data, condicion) => {
   return arrFiltroCasa;
 };
 window.filtroCasa = filtroCasa;
+
+const ordenadoAscendente = (data) => {
+  let arrOrdenadoAsc = [];
+  arrOrdenadoAsc = data.sort(
+    (aaa, bbb) => {
+      let aa = parseInt(aaa.yearOfBirth);
+      let bb = parseInt(bbb.yearOfBirth);
+      if (aa < bb) {
+        return -1;
+      } else if (aa > bb) {
+        return 1;
+      } else {
+        return 0;
+      }
+    });
+  return arrOrdenadoAsc;
+};
+
+window.ordenadoAscendente = ordenadoAscendente; 

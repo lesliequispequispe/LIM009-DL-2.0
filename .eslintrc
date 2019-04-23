@@ -12,7 +12,8 @@
     "filtroGenero": false,
     "filtroRolStaff": false,
     "filtroRolStudents": false,
-    "filtroCasa": false
+    "filtroCasa": false,
+    "ordenadoAscendente": false
   },
   "rules": {
     "allowTernary": true,

@@ -215,5 +215,98 @@ describe('filtroCasa', () => {
     expect(filtroCasa(input4, condicion4)).toEqual(output4);
   });
 });
-
-
+const input5 = [{
+  "name": "Harry Potter",
+  "species": "human",
+  "gender": "male",
+  "house": "Gryffindor",
+  "dateOfBirth": "31-07-1980",
+  "yearOfBirth": 1980,
+  "hogwartsStudent": true,
+  "hogwartsStaff": false
+},
+{
+  "name": "Hermione Granger",
+  "species": "human",
+  "gender": "female",
+  "house": "Gryffindor",
+  "dateOfBirth": "19-09-1979",
+  "yearOfBirth": 1979,
+  "hogwartsStudent": true,
+  "hogwartsStaff": false,
+}];
+const output5 = [{
+  "name": "Hermione Granger",
+  "species": "human",
+  "gender": "female",
+  "house": "Gryffindor",
+  "dateOfBirth": "19-09-1979",
+  "yearOfBirth": 1979,
+  "hogwartsStudent": true,
+  "hogwartsStaff": false,
+},
+{
+  "name": "Harry Potter",
+  "species": "human",
+  "gender": "male",
+  "house": "Gryffindor",
+  "dateOfBirth": "31-07-1980",
+  "yearOfBirth": 1980,
+  "hogwartsStudent": true,
+  "hogwartsStaff": false
+}];
+const input6 = [{
+  "name": "Hermione Granger",
+  "yearOfBirth": 1979,
+},
+{
+  "name": "Harry Potter",
+  "yearOfBirth": 1980,
+}];
+const output6 = [{
+  "name": "Harry Potter",
+  "yearOfBirth": 1980,
+},
+{
+  "name": "Hermione Granger",
+  "yearOfBirth": 1979,
+}];
+const input7 = [{
+  "name": "Harry Potter",
+  "yearOfBirth": 1980,
+  "hogwartsStudent": true,
+  "hogwartsStaff": false
+},
+{
+  "name": "Neville Longbottom",
+  "yearOfBirth": 1980,
+  "hogwartsStudent": true,
+  "hogwartsStaff": false,
+}];
+const output7 = [
+  {
+    "name": "Harry Potter",
+    "yearOfBirth": 1980,
+    "hogwartsStudent": true,
+    "hogwartsStaff": false
+  },
+  {
+    "name": "Neville Longbottom",
+    "yearOfBirth": 1980,
+    "hogwartsStudent": true,
+    "hogwartsStaff": false,
+  }];
+describe('ordenadoAscendente', () => {
+  it('debería ser una función', () => {
+    expect(typeof ordenadoAscendente).toBe('function');
+  });
+  it('debería retornar "output5"', () => {
+    expect(ordenadoAscendente(input5)).toEqual(output5);
+  });
+  it('debería retornar "output6"', () => {
+    expect(ordenadoAscendente(input6).reverse()).toEqual(output6);
+  });
+  it('debería retornar "output7"', () => {
+    expect(ordenadoAscendente(input7)).toEqual(output7);
+  });
+});
