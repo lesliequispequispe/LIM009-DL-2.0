@@ -54,3 +54,29 @@ const ordenadoAscendente = (data) => {
 };
 
 window.ordenadoAscendente = ordenadoAscendente; 
+
+const calcularEdad = (anioNacimiento) => {
+  const anioActual = new Date().getFullYear();
+  let resultadoEdad = anioActual - anioNacimiento;
+};
+ window.calcularEdad = calcularEdad;
+/* const  edadActual = (data) => {
+  let arrEdadActual = [];
+  for (let i = 0; i < data.length; i++) {
+    arrEdadActual.push(data[i].yearOfBirth)
+    console.log(data[i].yearOfBirth);
+  }
+};
+edadActual(); */
+/* const edadActual = (fecha) => {
+  let hoy = new Date();
+  let cumpleaños = new Date(fecha);
+  let edad = hoy.getFullYear() - cumpleaños.getFullYear();
+  let m = hoy.getMonth() - cumpleaños.getMonth();
+  if (m < 0 || (m === 0 && hoy.getDate() < cumpleaños.getDate())) {
+    edad--;
+  }
+  console.log(edad);
+}
+edadActual()
+window.edadActual = edadActual; */

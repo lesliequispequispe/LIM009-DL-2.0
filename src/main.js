@@ -23,7 +23,7 @@ const cargarJSON = () => {
       });
 
       const casa = document.getElementById("casa");
-      casa.addEventListener("click", () => {
+      casa.addEventListener("change", () => {
         pintadoContenedor.innerHTML = pintandoDataHarryPotter(filtroCasa(data, casa.value));
       });
 
@@ -35,6 +35,9 @@ const cargarJSON = () => {
           pintadoContenedor.innerHTML = pintandoDataHarryPotter(ordenadoAscendente(data).reverse());
         });
       });
+      calcularEdad(data[0].yearOfBirth);
+      
+      calcularEdadActualParaTodos(data);
     });
 };
 cargarJSON();
@@ -42,22 +45,35 @@ const pintadoContenedor = document.getElementById("output");
 const pintandoDataHarryPotter = (data) => {
   let pintado = "";
   for (let i = 0; i < data.length; i++) {
-    pintado += `<div class="contenedor-pintado">
-                  <div>
-                  <img  class="imagenes" src="${data[i].image}" alt="${data[i].image}"/>
-                  </div>
-                  <div>
-                  <p>name:${data[i].name}</p>
-                  <p>actor:${data[i].actor}</p>
-                  <p>species:${data[i].species}</p>
-                  <p>house:${data[i].house}</p>
-                  <p>dateOfBirth:${data[i].dateOfBirth}</p>
-                  <p>yearOfBirth:${data[i].yearOfBirth}</p>
-                  <p>hogwartsStudent:${data[i].hogwartsStudent}</p>
-                  <p>hogwartsStaff:${data[i].hogwartsStaff}</p>
-                  </div>
-                  </div>`;
+    pintado += `
+      <div class="contenedor-pintado">
+        <div>
+          <img  class="imagenes" src="${data[i].image}" alt="${data[i].image}"/>
+        </div>
+        <div>
+          <p>name:${data[i].name}</p>
+          <p>actor:${data[i].actor}</p>
+          <p>species:${data[i].species}</p>
+          <p>house:${data[i].house}</p>
+          <p>dateOfBirth:${data[i].dateOfBirth}</p>
+          <p>yearOfBirth:${data[i].yearOfBirth}</p>
+          <p>hogwartsStudent:${data[i].hogwartsStudent}</p>
+          <p>hogwartsStaff:${data[i].hogwartsStaff}</p>
+          <p>edadActual:${data[i].edadActual}</p>
+        </div>
+      </div>
+    `;
   }
   return pintado;
 };
-window.pintandoDataHarryPotter = pintandoDataHarryPotter; 
+
+const calcularEdadActualParaTodos = (data, anioNacimientoDeTodaData) => {
+   let anioActual = new Date().getFullYear();
+   let resultadoEdadParaTodos = 0;
+  for (let i = 0; i < data.length; i++) {
+    anioNacimientoDeTodaData = (data[i].yearOfBirth);
+    resultadoEdadParaTodos = (anioActual - anioNacimientoDeTodaData);
+    data.edadActual = resultadoEdadParaTodos;
+    console.log(data.edadActual = resultadoEdadParaTodos);
+  }
+};
