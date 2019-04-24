@@ -35,30 +35,46 @@ const cargarJSON = () => {
           pintadoContenedor.innerHTML = pintandoDataHarryPotter(ordenadoAscendente(data).reverse());
         });
       });
+      /* edadActual(data[1].yearOfBirth); */
+      edadActualTodaData(data);
     });
 };
 cargarJSON();
+
 const pintadoContenedor = document.getElementById("output");
 const pintandoDataHarryPotter = (data) => {
   let pintado = "";
   for (let i = 0; i < data.length; i++) {
-    pintado += `<div class="contenedor-pintado">
-                  <div>
-                  <img  class="imagenes" src="${data[i].image}" alt="${data[i].image}"/>
-                  </div>
-                  <div>
-                  <p>name:${data[i].name}</p>
-                  <p>actor:${data[i].actor}</p>
-                  <P>gender:${data[i].gender}</p>
-                  <p>species:${data[i].species}</p>
-                  <p>house:${data[i].house}</p>
-                  <p>dateOfBirth:${data[i].dateOfBirth}</p>
-                  <p>yearOfBirth:${data[i].yearOfBirth}</p>
-                  <p>hogwartsStudent:${data[i].hogwartsStudent}</p>
-                  <p>hogwartsStaff:${data[i].hogwartsStaff}</p>
-                  </div>
-                  </div>`;
+    pintado += `
+    <div class="contenedor-pintado">
+       <div>
+         <img  class="imagenes" src="${data[i].image}" alt="${data[i].image}"/>
+       </div>
+       <div>
+         <p>name:${data[i].name}</p>
+         <p>actor:${data[i].actor}</p>
+         <P>gender:${data[i].gender}</p>
+         <p>species:${data[i].species}</p>
+         <p>house:${data[i].house}</p>
+         <p>dateOfBirth:${data[i].dateOfBirth}</p>
+         <p>yearOfBirth:${data[i].yearOfBirth}</p>
+         <p>hogwartsStudent:${data[i].hogwartsStudent}</p>
+         <p>hogwartsStaff:${data[i].hogwartsStaff}</p>
+         </div>
+    </div>
+ `;
   }
   return pintado;
 };
 window.pintandoDataHarryPotter = pintandoDataHarryPotter; 
+
+const edadActualTodaData = (data, fechaNacimientoTodaData) => {
+  let anioActualTodaData = new Date().getFullYear();
+  let resultadoEdadActualTodaData = 0;
+  for (let i = 0; i < data.length; i++) {
+    fechaNacimientoTodaData = data[i].yearOfBirth;
+     resultadoEdadActualTodaData = anioActualTodaData - fechaNacimientoTodaData;
+    console.log(fechaNacimientoTodaData);
+    console.log(resultadoEdadActualTodaData);
+  }
+}

@@ -54,3 +54,10 @@ const ordenadoAscendente = (data) => {
 };
 
 window.ordenadoAscendente = ordenadoAscendente; 
+
+const edadActual = (fechaNacimiento) => {
+  let anioActual = new Date().getFullYear();
+  let resultadoEdadActual = anioActual - fechaNacimiento;
+  console.log(resultadoEdadActual);
+}
+window.edadActual = edadActual;
