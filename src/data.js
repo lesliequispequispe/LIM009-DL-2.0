@@ -1,9 +1,4 @@
 /* Manejo de data */
-/* const example = () => {
-  return 'example';
-};
-window.example = example; */
-
 const filtroGenero = (data, condicion) => {
   let arrFiltroGenero = [];
   arrFiltroGenero = data.filter((aa) =>
@@ -40,8 +35,8 @@ const ordenadoAscendente = (data) => {
   let arrOrdenadoAsc = [];
   arrOrdenadoAsc = data.sort(
     (aaa, bbb) => {
-      let aa = parseInt(aaa.yearOfBirth);
-      let bb = parseInt(bbb.yearOfBirth);
+      let aa = parseInt(aaa.edadActual);
+      let bb = parseInt(bbb.edadActual);
       if (aa < bb) {
         return -1;
       } else if (aa > bb) {
@@ -52,12 +47,4 @@ const ordenadoAscendente = (data) => {
     });
   return arrOrdenadoAsc;
 };
-
 window.ordenadoAscendente = ordenadoAscendente; 
-
-const edadActual = (fechaNacimiento) => {
-  let anioActual = new Date().getFullYear();
-  let resultadoEdadActual = anioActual - fechaNacimiento;
-  console.log(resultadoEdadActual);
-}
-window.edadActual = edadActual;

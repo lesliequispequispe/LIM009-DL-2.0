@@ -42,9 +42,11 @@ label {
 .main {
     background: #1a0000;
 }
-/* .imagenes {
-    font-size: 300px;
-} */
+.imagenes {
+    width: 182px;
+    height: 175px;
+    border-radius: 50%;
+}
 /* footer h3 {
     color: aliceblue;
 } */
