@@ -3,36 +3,38 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1,
+   maximum-scale=1">
   <title>Harry Potter</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body class="body">
-  <header class="header">
+  <header class="contenedor-encabezado">
     <section>
-      <img class="header" src="imagenes/logouno.png" alt="imagen del texto que dice harry potter en color dorado" />
-      <div class="header">
-        <label class="header">Ordenar por edad:</label>
+      <img src="imagenes/logouno.png" alt="imagen del texto que dice harry potter en color dorado" />
+      <div>
+        <label>Ordenar por edad:</label>
         <br /><br />
-        <button class="header" id="ascendente">ascendente</button>
-        <button class="header" id="descendente">descendente</button>
+        <button id="ascendente">ascendente</button>
+        <button id="descendente">descendente</button>
         <br /><br /><br />
-        <label class="header">Filtrar por:</label>
+        <label>Filtrar por:</label>
         <br /><br />
-        <label class="header">Genero:</label>
-        <select class="header" id="genero">
-          <option class="header" value="female">female</option>
-          <option class="header" value="male">male</option>
+        <label>Genero:</label>
+        <select id="genero">
+          <option value="female">female</option>
+          <option value="male">male</option>
         </select>
         <br /><br />
-        <label class="header">Rol:</label>
-        <select class="header" id="rol">
-          <option class="header" value="hogwartsStudent">hogwartsStudent</option>
-          <option class="header" value="hogwartsStaff">hogwartsStaff</option>
+        <label>Rol:</label>
+        <select id="rol">
+          <option value="hogwartsStudent">hogwartsStudent</option>
+          <option value="hogwartsStaff">hogwartsStaff</option>
         </select>
         <br /><br />
-        <label class="header">Casa:</label>
-        <select class="header" id="casa">
+        <label>Casa:</label>
+        <select id="casa">
           <option value="Gryffindor">Gryffindor</option>
           <option value="Slytherin">Slytherin</option>
           <option value="Hufflepuff">Hufflepuff</option>
@@ -41,8 +43,8 @@
       </div>
     </section>
   </header>
-  <main class="contenido">
-    <div class="contenido">
+  <main>
+    <div>
       <section>
         <h1>personajes de la saga de Harry Potter</h1>
         <div class="contenido" id="output"></div>
