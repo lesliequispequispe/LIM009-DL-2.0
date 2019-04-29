@@ -2,7 +2,11 @@
   "env": {
     "browser": true,
     "jest": true
+<<<<<<< HEAD
     },
+=======
+  },
+>>>>>>> 83c452c6ee27c0590601759969dd6451b7b8d76e
   "parserOptions": {
     "ecmaVersion": 6
   },

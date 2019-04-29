@@ -5,75 +5,88 @@ const cargarJSON = () => {
       return res.json();
     })
     .then((data) => {
-      pintadoContenedor.innerHTML = pintandoDataHarryPotter(data);
-
       const genero = document.getElementById("genero");
       genero.addEventListener("change", () => {
-        pintadoContenedor.innerHTML = pintandoDataHarryPotter(filtroGenero(data, genero.value));
+
+        pintadoContenedor.innerHTML = pintandoDataHarryPotter(nuevaDataPotter(window.filtroGenero(data, genero.value)));
       });
 
       const rol = document.getElementById("rol");
 
       rol.addEventListener("change", (ee) => {
         if (ee.target.value === "hogwartsStudent") {
-          pintadoContenedor.innerHTML = pintandoDataHarryPotter(window.filtroRolStudents(data, true));
+          pintadoContenedor.innerHTML = pintandoDataHarryPotter(nuevaDataPotter(window.filtroRolStudents(data, true)));
         } else if (ee.target.value === "hogwartsStaff") {
-          pintadoContenedor.innerHTML = pintandoDataHarryPotter(window.filtroRolStaff(data, true));
+          pintadoContenedor.innerHTML = pintandoDataHarryPotter(nuevaDataPotter(window.filtroRolStaff(data, true)));
         }
       });
 
       const casa = document.getElementById("casa");
       casa.addEventListener("change", () => {
-        pintadoContenedor.innerHTML = pintandoDataHarryPotter(filtroCasa(data, casa.value));
+        pintadoContenedor.innerHTML = pintandoDataHarryPotter(nuevaDataPotter(window.filtroCasa(data, casa.value)));
       });
 
       const ascendente = document.getElementById("ascendente");
       ascendente.addEventListener("click", () => {
-        pintadoContenedor.innerHTML = pintandoDataHarryPotter(ordenadoAscendente(data));
-        const descendente = document.getElementById("descendente");
-        descendente.addEventListener("click", () => {
-          pintadoContenedor.innerHTML = pintandoDataHarryPotter(ordenadoAscendente(data).reverse());
-        });
+        pintadoContenedor.innerHTML = pintandoDataHarryPotter(window.ordenadoAscendente(nuevaDataPotter(data)));
       });
-      calcularEdad(data[0].yearOfBirth);
-      
-      calcularEdadActualParaTodos(data);
+      pintadoContenedor.innerHTML = pintandoDataHarryPotter(nuevaDataPotter(data));
+
+      const descendente = document.getElementById("descendente");
+      descendente.addEventListener("click", () => {
+        pintadoContenedor.innerHTML = pintandoDataHarryPotter(window.ordenadoAscendente(nuevaDataPotter(data)).reverse());
+      });
     });
 };
 cargarJSON();
+
 const pintadoContenedor = document.getElementById("output");
+
 const pintandoDataHarryPotter = (data) => {
+
   let pintado = "";
   for (let i = 0; i < data.length; i++) {
     pintado += `
-      <div class="contenedor-pintado">
-        <div>
-          <img  class="imagenes" src="${data[i].image}" alt="${data[i].image}"/>
-        </div>
-        <div>
-          <p>name:${data[i].name}</p>
-          <p>actor:${data[i].actor}</p>
-          <p>species:${data[i].species}</p>
-          <p>house:${data[i].house}</p>
-          <p>dateOfBirth:${data[i].dateOfBirth}</p>
-          <p>yearOfBirth:${data[i].yearOfBirth}</p>
-          <p>hogwartsStudent:${data[i].hogwartsStudent}</p>
-          <p>hogwartsStaff:${data[i].hogwartsStaff}</p>
-          <p>edadActual:${data[i].edadActual}</p>
-        </div>
-      </div>
-    `;
+    <div class="contenedor-pintado">
+       <div class="imagenes">
+         <img  class="imagenes" src="${data[i].image}" alt="${data[i].image}"/>
+       </div>
+       <div>
+         <p>name:${data[i].name}</p>
+         <p>actor:${data[i].actor}</p>
+         <P>gender:${data[i].gender}</p>
+         <p>species:${data[i].species}</p>
+         <p>house:${data[i].house}</p>
+         <p>dateOfBirth:${data[i].yearOfBirth}</p>
+         <p>hogwartsStudent:${data[i].hogwartsStudent}</p>
+         <p>hogwartsStaff:${data[i].hogwartsStaff}</p>
+         <p>edadActual:${data[i].edadActual}</p>
+         </div>
+    </div>
+ `;
   }
   return pintado;
 };
-
-const calcularEdadActualParaTodos = (data, anioNacimientoDeTodaData) => {
-   let anioActual = new Date().getFullYear();
-   let resultadoEdadParaTodos = 0;
+const nuevaDataPotter = (data) => {
+  let newData = []
+  let fechaNacimientoTodaData = 0;
+  let anioActualTodaData = new Date().getFullYear();
+  let resultadoEdadActualTodaData = 0;
   for (let i = 0; i < data.length; i++) {
-    anioNacimientoDeTodaData = (data[i].yearOfBirth);
-    resultadoEdadParaTodos = (anioActual - anioNacimientoDeTodaData);
-    data.edadActual = resultadoEdadParaTodos;
-    console.log(data.edadActual = resultadoEdadParaTodos);
-  }
+    let newObj = {}
+    newObj.image = data[i].image,
+      newObj.name = data[i].name,
+      newObj.species = data[i].species,
+      newObj.gender = data[i].gender,
+      newObj.actor = data[i].actor,
+      newObj.house = data[i].house,
+      newObj.hogwartsStudent = data[i].hogwartsStudent,
+      newObj.hogwartsStaff = data[i].hogwartsStaff,
+      newObj.yearOfBirth = data[i].yearOfBirth,
+      fechaNacimientoTodaData = data[i].yearOfBirth;
+    resultadoEdadActualTodaData = anioActualTodaData - fechaNacimientoTodaData;
+    newObj.edadActual = resultadoEdadActualTodaData ;
+    newData.push(newObj)
+  };
+  return newData;
 };

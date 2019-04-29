@@ -3,34 +3,36 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1,
+   maximum-scale=1">
   <title>Harry Potter</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
-  <header>
-    <section class="contenedor-encabezado">
-      <img class="img" src="imagenes/logouno.png" alt="imagen del texto que dice harry potter en color dorado" />
-      <div class="botones">
+<body class="body">
+  <header class="contenedor-encabezado">
+    <section>
+      <img src="imagenes/logouno.png" alt="imagen del texto que dice harry potter en color dorado" />
+      <div>
         <label>Ordenar por edad:</label>
-        <br/><br/>
+        <br /><br />
         <button id="ascendente">ascendente</button>
         <button id="descendente">descendente</button>
-        <br/><br/><br/>
+        <br /><br /><br />
         <label>Filtrar por:</label>
-        <br/><br/>
+        <br /><br />
         <label>Genero:</label>
         <select id="genero">
           <option value="female">female</option>
           <option value="male">male</option>
         </select>
-        <br/><br/>
+        <br /><br />
         <label>Rol:</label>
         <select id="rol">
           <option value="hogwartsStudent">hogwartsStudent</option>
           <option value="hogwartsStaff">hogwartsStaff</option>
         </select>
-        <br/><br/>
+        <br /><br />
         <label>Casa:</label>
         <select id="casa">
           <option value="Gryffindor">Gryffindor</option>
@@ -41,22 +43,16 @@
       </div>
     </section>
   </header>
-  <main id="root">
-    <div class="main">
+  <main>
+    <div>
       <section>
-        <!-- <img src="imagenes/imagenuno.jpg" alt="imagen de harry potter, ron y germayorie alzando las varitas "/> -->
         <h1>personajes de la saga de Harry Potter</h1>
-        <!--<p>Donde conoceras mas sobre tus personajes favoritos</p>
-      <p>A conocerlos YA!</p> -->
-        <div id="output"></div>
-      </section>
+        <div class="contenido" id="output"></div>
     </div>
   </main>
+
   <script src="data.js"></script>
   <script src="main.js"></script>
-  <footer>
-    <!--  @Leslie Lisbet Quispe Quispe 2019 -->
-  </footer>
 </body>
 
 </html>
