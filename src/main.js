@@ -5,37 +5,37 @@ const cargarJSON = () => {
       return res.json();
     })
     .then((data) => {
-      pintadoContenedor.innerHTML = pintandoDataHarryPotter(data);
-
       const genero = document.getElementById("genero");
       genero.addEventListener("change", () => {
-        pintadoContenedor.innerHTML = pintandoDataHarryPotter(filtroGenero(data, genero.value));
+
+        pintadoContenedor.innerHTML = pintandoDataHarryPotter(nuevaDataPotter(window.filtroGenero(data, genero.value)));
       });
 
       const rol = document.getElementById("rol");
 
       rol.addEventListener("change", (ee) => {
         if (ee.target.value === "hogwartsStudent") {
-          pintadoContenedor.innerHTML = pintandoDataHarryPotter(window.filtroRolStudents(data, true));
+          pintadoContenedor.innerHTML = pintandoDataHarryPotter(nuevaDataPotter(window.filtroRolStudents(data, true)));
         } else if (ee.target.value === "hogwartsStaff") {
-          pintadoContenedor.innerHTML = pintandoDataHarryPotter(window.filtroRolStaff(data, true));
+          pintadoContenedor.innerHTML = pintandoDataHarryPotter(nuevaDataPotter(window.filtroRolStaff(data, true)));
         }
       });
 
       const casa = document.getElementById("casa");
       casa.addEventListener("change", () => {
-        pintadoContenedor.innerHTML = pintandoDataHarryPotter(filtroCasa(data, casa.value));
+        pintadoContenedor.innerHTML = pintandoDataHarryPotter(nuevaDataPotter(window.filtroCasa(data, casa.value)));
       });
 
       const ascendente = document.getElementById("ascendente");
       ascendente.addEventListener("click", () => {
-        pintadoContenedor.innerHTML = pintandoDataHarryPotter(ordenadoAscendente(data));
-        const descendente = document.getElementById("descendente");
-        descendente.addEventListener("click", () => {
-          pintadoContenedor.innerHTML = pintandoDataHarryPotter(ordenadoAscendente(data).reverse());
-        });
+        pintadoContenedor.innerHTML = pintandoDataHarryPotter(window.ordenadoAscendente(nuevaDataPotter(data)));
       });
       pintadoContenedor.innerHTML = pintandoDataHarryPotter(nuevaDataPotter(data));
+
+      const descendente = document.getElementById("descendente");
+      descendente.addEventListener("click", () => {
+        pintadoContenedor.innerHTML = pintandoDataHarryPotter(window.ordenadoAscendente(nuevaDataPotter(data)).reverse());
+      });
     });
 };
 cargarJSON();
@@ -43,6 +43,7 @@ cargarJSON();
 const pintadoContenedor = document.getElementById("output");
 
 const pintandoDataHarryPotter = (data) => {
+
   let pintado = "";
   for (let i = 0; i < data.length; i++) {
     pintado += `
@@ -56,7 +57,7 @@ const pintandoDataHarryPotter = (data) => {
          <P>gender:${data[i].gender}</p>
          <p>species:${data[i].species}</p>
          <p>house:${data[i].house}</p>
-         <p>dateOfBirth:${data[i].dateOfBirth}</p>
+         <p>dateOfBirth:${data[i].yearOfBirth}</p>
          <p>hogwartsStudent:${data[i].hogwartsStudent}</p>
          <p>hogwartsStaff:${data[i].hogwartsStaff}</p>
          <p>edadActual:${data[i].edadActual}</p>
@@ -68,9 +69,9 @@ const pintandoDataHarryPotter = (data) => {
 };
 const nuevaDataPotter = (data) => {
   let newData = []
-  let fechaNacimientoTodaData = "";
+  let fechaNacimientoTodaData = 0;
   let anioActualTodaData = new Date().getFullYear();
-  let resultadoEdadActualTodaData = "";
+  let resultadoEdadActualTodaData = 0;
   for (let i = 0; i < data.length; i++) {
     let newObj = {}
     newObj.image = data[i].image,
@@ -81,13 +82,11 @@ const nuevaDataPotter = (data) => {
       newObj.house = data[i].house,
       newObj.hogwartsStudent = data[i].hogwartsStudent,
       newObj.hogwartsStaff = data[i].hogwartsStaff,
-      newObj.dateOfBirth = data[i].dateOfBirth,
-      newObj.edadActual = resultadoEdadActualTodaData,
-      fechaNacimientoTodaData = data[i].dateOfBirth;
+      newObj.yearOfBirth = data[i].yearOfBirth,
+      fechaNacimientoTodaData = data[i].yearOfBirth;
     resultadoEdadActualTodaData = anioActualTodaData - fechaNacimientoTodaData;
-    newObj.edadActual = parseInt(resultadoEdadActualTodaData);
+    newObj.edadActual = resultadoEdadActualTodaData ;
     newData.push(newObj)
-    console.log(newData);
   };
   return newData;
 };
