@@ -46,7 +46,7 @@ const pintandoDataHarryPotter = (data) => {
   let pintado = "";
   for (let i = 0; i < data.length; i++) {
     pintado += `
-    <div class="contenedor-pintado  class="col-xs-6">
+    <div class="contenedor-tarjetas col-xs-6 col-md-3">
        <div class="imagenes">
          <img  class="imagenes" src="${data[i].image}" alt="${data[i].image}"/>
        </div>
