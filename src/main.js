@@ -12,7 +12,6 @@ const cargarJSON = () => {
       });
 
       const rol = document.getElementById("rol");
-
       rol.addEventListener("change", (ee) => {
         if (ee.target.value === "hogwartsStudent") {
           pintadoContenedor.innerHTML = pintandoDataHarryPotter(nuevaDataPotter(window.filtroRolStudents(data, true)));
@@ -47,7 +46,7 @@ const pintandoDataHarryPotter = (data) => {
   let pintado = "";
   for (let i = 0; i < data.length; i++) {
     pintado += `
-    <div class="contenedor-pintado">
+    <div class="contenedor-tarjetas col-xs-6 col-md-3">
        <div class="imagenes">
          <img  class="imagenes" src="${data[i].image}" alt="${data[i].image}"/>
        </div>
@@ -85,7 +84,7 @@ const nuevaDataPotter = (data) => {
       newObj.yearOfBirth = data[i].yearOfBirth,
       fechaNacimientoTodaData = data[i].yearOfBirth;
     resultadoEdadActualTodaData = anioActualTodaData - fechaNacimientoTodaData;
-    newObj.edadActual = resultadoEdadActualTodaData ;
+    newObj.edadActual = resultadoEdadActualTodaData;
     newData.push(newObj)
   };
   return newData;
